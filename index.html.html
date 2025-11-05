@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishSmantiBaubau - Materi Bahasa Inggris Kelas 10</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+        
+        nav {
+            background-color: var(--secondary);
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .hero {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .hero h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .section-title {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .material-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-body p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .card-footer {
+            padding: 1rem 1.5rem;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .resources {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .resources-list {
+            list-style-type: none;
+        }
+        
+        .resources-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .resources-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .resources-list a {
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .resources-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .resources-list i {
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+        
+        .about {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div>
+                <h1>EnglishSmantiBaubau</h1>
+                <p class="subtitle">Materi Bahasa Inggris Kelas 10 - SMA Negeri 3 Baubau</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="#materi"><i class="fas fa-book"></i> Materi Pelajaran</a></li>
+            <li><a href="#resources"><i class="fas fa-download"></i> Sumber Belajar</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="home" class="hero">
+            <h2>Selamat Datang di EnglishSmantiBaubau</h2>
+            <p>Website pembelajaran Bahasa Inggris untuk siswa SMA Negeri 3 Baubau Kelas 10 berdasarkan Kurikulum Merdeka. Temukan materi pelajaran, latihan, dan sumber belajar yang menarik untuk meningkatkan kemampuan Bahasa Inggris Anda.</p>
+            <a href="#materi" class="btn">Mulai Belajar</a>
+        </section>
+        
+        <section id="materi">
+            <h2 class="section-title">Materi Pelajaran</h2>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="card-header">
+                        <h3>Bab 1: Greetings and Introduction</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Mempelajari cara menyapa, memperkenalkan diri, dan percakapan sehari-hari dalam Bahasa Inggris.</p>
+                        <ul>
+                            <li>Greetings and Responses</li>
+                            <li>Self Introduction</li>
+                            <li>Asking Personal Information</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Pelajari</a>
+                        <span><i class="far fa-clock"></i> 4 Pertemuan</span>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-header">
+                        <h3>Bab 2: Descriptive Text</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Mempelajari cara mendeskripsikan orang, tempat, dan benda dalam Bahasa Inggris.</p>
+                        <ul>
+                            <li>Structure of Descriptive Text</li>
+                            <li>Adjectives and Adverbs</li>
+                            <li>Describing People and Places</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Pelajari</a>
+                        <span><i class="far fa-clock"></i> 5 Pertemuan</span>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-header">
+                        <h3>Bab 3: Narrative Text</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Mempelajari teks naratif, struktur, dan cara menceritakan pengalaman atau cerita.</p>
+                        <ul>
+                            <li>Elements of Narrative</li>
+                            <li>Past Tense</li>
+                            <li>Writing Simple Stories</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Pelajari</a>
+                        <span><i class="far fa-clock"></i> 6 Pertemuan</span>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-header">
+                        <h3>Bab 4: Procedure Text</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Mempelajari cara memberikan instruksi dan menjelaskan proses dalam Bahasa Inggris.</p>
+                        <ul>
+                            <li>Imperative Sentences</li>
+                            <li>Sequencing Words</li>
+                            <li>Writing Instructions</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Pelajari</a>
+                        <span><i class="far fa-clock"></i> 4 Pertemuan</span>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-header">
+                        <h3>Bab 5: Recount Text</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Mempelajari cara menceritakan kembali pengalaman atau peristiwa masa lalu.</p>
+                        <ul>
+                            <li>Past Tenses Review</li>
+                            <li>Time Connectives</li>
+                            <li>Writing Personal Recounts</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Pelajari</a>
+                        <span><i class="far fa-clock"></i> 5 Pertemuan</span>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-header">
+                        <h3>Bab 6: Announcement Text</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Mempelajari cara membuat dan memahami pengumuman dalam Bahasa Inggris.</p>
+                        <ul>
+                            <li>Structure of Announcements</li>
+                            <li>Formal and Informal Language</li>
+                            <li>Creating Announcements</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Pelajari</a>
+                        <span><i class="far fa-clock"></i> 3 Pertemuan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="resources" class="resources">
+            <h2 class="section-title">Sumber Belajar</h2>
+            <ul class="resources-list">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-pdf"></i> Modul Pembelajaran Bahasa Inggris Kelas 10
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-audio"></i> Audio Listening Practice
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-video"></i> Video Pembelajaran Interaktif
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-word"></i> Worksheet dan Latihan Soal
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-book-open"></i> E-book Bahasa Inggris Kelas 10
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-gamepad"></i> Games dan Quiz Interaktif
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="about" class="about">
+            <h2 class="section-title">Tentang EnglishSmantiBaubau</h2>
+            <p>EnglishSmantiBaubau adalah platform pembelajaran online yang dirancang khusus untuk siswa SMA Negeri 3 Baubau Kelas 10 yang mengikuti Kurikulum Merdeka. Website ini menyediakan materi pelajaran Bahasa Inggris yang lengkap, menarik, dan mudah dipahami.</p>
+            <p>Dengan pendekatan pembelajaran yang interaktif dan berpusat pada siswa, kami berharap dapat membantu meningkatkan kemampuan Bahasa Inggris siswa secara menyeluruh, termasuk listening, speaking, reading, dan writing.</p>
+            <p>Website ini dikembangkan oleh guru Bahasa Inggris SMA Negeri 3 Baubau yang berpengalaman dan terus diperbarui sesuai dengan perkembangan Kurikulum Merdeka.</p>
+        </section>
+        
+        <section id="contact" class="about">
+            <h2 class="section-title">Kontak</h2>
+            <p>Jika Anda memiliki pertanyaan atau masukan mengenai materi pembelajaran di website ini, silakan hubungi kami:</p>
+            <p><i class="fas fa-envelope"></i> Email: mbolosi.dedy@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Telepon: 0811448001</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 EnglishSmantiBaubau - Materi Bahasa Inggris Kelas 10 Kurikulum Merdeka</p>
+            <p>Dikembangkan untuk mendukung pembelajaran Bahasa Inggris di SMA Negeri 3 Baubau</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling untuk navigasi
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animasi untuk material cards saat di-scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.material-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
